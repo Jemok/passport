@@ -3,9 +3,13 @@
 namespace Laravel\Passport;
 
 use Illuminate\Database\Eloquent\Model;
+use App\Traits\Uuids;
 
 class PersonalAccessClient extends Model
 {
+    use Uuids;
+
+    public $incrementing = false;
     /**
      * The database table used by the model.
      *
